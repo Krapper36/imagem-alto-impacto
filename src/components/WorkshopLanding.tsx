@@ -47,8 +47,12 @@ const WorkshopLanding = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen pt-20 pb-12 px-4 md:px-8 flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background z-0"></div>
+      <section 
+        className="relative min-h-screen pt-20 pb-12 px-4 md:px-8 flex items-center bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${andreaMain})`
+        }}
+      >
         
         <div className="container mx-auto max-w-5xl relative z-10">
           {/* Workshop Tag */}
@@ -59,80 +63,64 @@ const WorkshopLanding = () => {
             </div>
           </div>
 
-          {/* Event Details */}
-          <div className="flex flex-wrap gap-4 mb-6 text-sm md:text-base">
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 bg-warning rounded-full animate-pulse"></span>
-              <span>Ao vivo - com opção da gravação na íntegra</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-5 h-5 text-accent" />
-              <span>10 de Novembro</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5 text-accent" />
-              <span>20h (horário de Brasília)</span>
-            </div>
-          </div>
-
           {/* Main Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 leading-tight">
             Em apenas 1 dia, você vai descobrir como:
           </h1>
 
           {/* Benefits List */}
-          <div className="space-y-4 mb-10">
+          <div className="space-y-3 md:space-y-4 mb-8 md:mb-10">
             {[
               "Atrair clientes de alto padrão",
               "Aumentar o valor percebido do seu trabalho",
               "Cobrar 5x mais caro sem medo de perder clientes",
             ].map((benefit, index) => (
               <div key={index} className="flex items-start gap-3">
-                <Check className="w-6 h-6 text-success flex-shrink-0 mt-1" />
-                <p className="text-lg md:text-xl">{benefit}</p>
+                <Check className="w-5 h-5 md:w-6 md:h-6 text-success flex-shrink-0 mt-1" />
+                <p className="text-base md:text-lg lg:text-xl">{benefit}</p>
               </div>
             ))}
           </div>
 
           {/* Price Highlight */}
-          <div className="bg-card border-2 border-cta rounded-lg p-6 mb-8 inline-block">
-            <p className="text-sm mb-2">🎟 Garanta agora o seu ingresso por apenas</p>
-            <p className="text-4xl md:text-5xl font-bold text-cta">R$ 47,00</p>
-            <p className="text-sm text-muted-foreground mt-2">(lote promocional)</p>
+          <div className="bg-card border-2 border-cta rounded-lg p-4 md:p-6 mb-6 md:mb-8 w-full md:inline-block">
+            <p className="text-xs md:text-sm mb-2">🎟 Garanta agora o seu ingresso por apenas</p>
+            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-cta">R$ 47,00</p>
+            <p className="text-xs md:text-sm text-muted-foreground mt-2">(lote promocional)</p>
           </div>
 
           {/* CTA Button */}
           <Button 
             onClick={scrollToCTA}
-            className="w-full md:w-auto bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg px-12 py-6 rounded-lg shadow-lg shadow-cta/50 transition-all hover:scale-105"
+            className="w-full md:w-auto bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-base md:text-lg px-8 md:px-12 py-4 md:py-6 rounded-lg shadow-lg shadow-cta/50 transition-all hover:scale-105 min-h-[44px]"
           >
             GARANTIR MEU INGRESSO
           </Button>
 
-          <p className="mt-6 text-sm text-muted-foreground">
+          <p className="mt-4 md:mt-6 text-xs md:text-sm text-muted-foreground">
             🖥️ Aula Online e Ao Vivo | 📅 10 de Novembro | ⏰ Vagas limitadas
           </p>
         </div>
       </section>
 
       {/* Countdown Section */}
-      <section className="py-16 px-4 md:px-8 bg-card">
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-card">
         <div className="container mx-auto max-w-5xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8">
             OS INGRESSOS ESGOTAM EM:
           </h2>
-          <div className="flex justify-center gap-4 flex-wrap">
+          <div className="flex justify-center gap-2 md:gap-4 flex-wrap">
             {[
               { value: timeLeft.days, label: "Dias" },
               { value: timeLeft.hours, label: "Horas" },
               { value: timeLeft.minutes, label: "Minutos" },
               { value: timeLeft.seconds, label: "Segundos" },
             ].map((item, index) => (
-              <div key={index} className="bg-accent rounded-lg p-6 min-w-[100px]">
-                <p className="text-4xl md:text-5xl font-bold text-accent-foreground">
+              <div key={index} className="bg-accent rounded-lg p-3 md:p-6 min-w-[70px] md:min-w-[100px]">
+                <p className="text-2xl md:text-4xl lg:text-5xl font-bold text-accent-foreground">
                   {String(item.value).padStart(2, "0")}
                 </p>
-                <p className="text-sm text-accent-foreground mt-2">{item.label}</p>
+                <p className="text-xs md:text-sm text-accent-foreground mt-1 md:mt-2">{item.label}</p>
               </div>
             ))}
           </div>
@@ -140,14 +128,14 @@ const WorkshopLanding = () => {
       </section>
 
       {/* Workshop Content Section */}
-      <section className="py-16 px-4 md:px-8">
+      <section className="py-12 md:py-16 px-4 md:px-8">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12">
             💎 <span className="text-cta">Por que essa aula é essencial</span> para o seu crescimento?
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+            <div className="space-y-4 md:space-y-6">
               {[
                 "Você vai aprender o método que transformou mulheres comuns em empresárias de alto padrão — reconhecidas, seguras e desejadas.",
                 "Vai descobrir como se vestir com propósito, usando o que você já tem, sem precisar gastar fortunas em novas roupas.",
@@ -156,8 +144,8 @@ const WorkshopLanding = () => {
                 "E o melhor: vai sair da aula com um plano prático para aplicar tudo no seu dia a dia e começar a cobrar o que realmente vale.",
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-success flex-shrink-0 mt-1" />
-                  <p className="text-base">{item}</p>
+                  <Check className="w-4 h-4 md:w-5 md:h-5 text-success flex-shrink-0 mt-1" />
+                  <p className="text-sm md:text-base">{item}</p>
                 </div>
               ))}
             </div>
@@ -166,14 +154,14 @@ const WorkshopLanding = () => {
               <img 
                 src={andreaSecondary} 
                 alt="Andrea Gomes" 
-                className="w-full rounded-lg shadow-2xl"
+                className="w-full rounded-lg shadow-2xl max-h-[300px] md:max-h-none object-cover"
               />
             </div>
           </div>
 
           <Button 
             onClick={scrollToCTA}
-            className="w-full md:w-auto bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg px-12 py-6 rounded-lg shadow-lg shadow-cta/50 transition-all hover:scale-105"
+            className="w-full md:w-auto bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-base md:text-lg px-8 md:px-12 py-4 md:py-6 rounded-lg shadow-lg shadow-cta/50 transition-all hover:scale-105 min-h-[44px]"
           >
             EU QUERO ATRAIR CLIENTES ALTO PADRÃO
           </Button>
@@ -281,26 +269,26 @@ const WorkshopLanding = () => {
       </section>
 
       {/* Mentor Section */}
-      <section className="py-16 px-4 md:px-8 bg-accent">
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-accent">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent-foreground">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-accent-foreground">
                 👩‍🏫 Conheça sua mentora
               </h2>
-              <h3 className="text-4xl font-bold mb-4 text-accent-foreground">Andrea Gomes</h3>
-              <div className="space-y-4 text-accent-foreground">
-                <p className="font-semibold">
+              <h3 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-accent-foreground">Andrea Gomes</h3>
+              <div className="space-y-3 md:space-y-4 text-accent-foreground">
+                <p className="font-semibold text-sm md:text-base">
                   Mentora de imagem e estilo, criadora do Método Prisma — um processo que transforma mulheres em versões autênticas, elegantes e de alto padrão, sem moldes prontos e sem perder a essência.
                 </p>
-                <p>
+                <p className="text-sm md:text-base">
                   Antes de se tornar referência em imagem, Andrea era advogada. Um feedback negativo sobre sua aparência a fez buscar uma consultoria de imagem. Naquele momento, ela percebeu que não estava feliz com a advocacia — e se encontrou em um novo propósito: ajudar mulheres a se redescobrirem por meio da sua imagem.
                 </p>
-                <p>
+                <p className="text-sm md:text-base">
                   Desde 2021, Andrea já atendeu dezenas de mulheres, ministrou palestras para advogadas, empresárias e órgãos públicos, e treinou equipes de lojas e salões de beleza.
                 </p>
-                <p className="font-semibold">Formações:</p>
-                <ul className="space-y-2 text-sm">
+                <p className="font-semibold text-sm md:text-base">Formações:</p>
+                <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
                   <li>🎓 Studio Immagine (Coloração Pessoal)</li>
                   <li>🎓 Pós-graduação em Consultoria de Imagem e Visagismo – Unyleya</li>
                   <li>🎓 Escola de Moda Cacavalcante</li>
@@ -311,7 +299,7 @@ const WorkshopLanding = () => {
               </div>
               <Button 
                 onClick={scrollToCTA}
-                className="mt-8 bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg px-12 py-6 rounded-lg shadow-lg shadow-cta/50 transition-all hover:scale-105"
+                className="mt-6 md:mt-8 w-full md:w-auto bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-base md:text-lg px-8 md:px-12 py-4 md:py-6 rounded-lg shadow-lg shadow-cta/50 transition-all hover:scale-105 min-h-[44px]"
               >
                 GARANTIR MEU INGRESSO
               </Button>
@@ -320,7 +308,7 @@ const WorkshopLanding = () => {
               <img 
                 src={andreaMain} 
                 alt="Andrea Gomes - Mentora de Imagem" 
-                className="w-full rounded-lg shadow-2xl"
+                className="w-full rounded-lg shadow-2xl max-h-[400px] md:max-h-none object-cover"
               />
             </div>
           </div>

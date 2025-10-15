@@ -29,19 +29,19 @@ All colors MUST be HSL.
     --accent: 25 100% 50%;
     --accent-foreground: 0 0% 0%;
 
-    --cta: 120 100% 50%;
-    --cta-foreground: 0 0% 0%;
+    --cta: 145 63% 49%;
+    --cta-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 120 100% 50%;
+    --ring: 145 63% 49%;
 
     --radius: 0.5rem;
 
-    --success: 120 100% 40%;
+    --success: 145 63% 42%;
     --warning: 0 100% 50%;
   }
 }
