@@ -38,17 +38,17 @@ const WorkshopLanding = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background font-['Montserrat',sans-serif] text-foreground">
+    <div className="min-h-screen bg-background font-['Montserrat',sans-serif] text-foreground overflow-x-hidden">
       {/* Fixed Attention Bar */}
-      <div className="fixed top-0 left-0 right-0 bg-cta z-50 py-3 px-4">
-        <p className="text-center text-cta-foreground font-bold text-sm md:text-base">
+      <div className="fixed top-0 left-0 right-0 bg-cta z-50 py-3 px-3 md:px-4 max-w-full">
+        <p className="text-center text-cta-foreground font-bold text-sm md:text-base break-words leading-tight">
           Atenção: Exclusivo para empresárias que já têm agenda cheia, mas querem cobrar mais caro pelos seus serviços
         </p>
       </div>
 
       {/* Hero Section */}
       <section 
-        className="relative min-h-screen pt-20 pb-12 px-4 md:px-8 flex items-center bg-cover bg-center bg-fixed"
+        className="relative min-h-screen pt-20 pb-12 px-3 md:px-8 flex items-center bg-cover bg-center bg-fixed max-w-full overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${andreaMain})`
         }}
@@ -83,9 +83,9 @@ const WorkshopLanding = () => {
           </div>
 
           {/* Price Highlight */}
-          <div className="bg-card border-2 border-cta rounded-lg p-4 md:p-6 mb-6 md:mb-8 w-full md:inline-block">
+          <div className="bg-card border-2 border-cta rounded-lg p-5 md:p-6 mb-6 md:mb-8 w-full md:inline-block text-center">
             <p className="text-xs md:text-sm mb-2">🎟 Garanta agora o seu ingresso por apenas</p>
-            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-cta">R$ 47,00</p>
+            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-cta mx-auto">R$ 47,00</p>
             <p className="text-xs md:text-sm text-muted-foreground mt-2">(lote promocional)</p>
           </div>
 
@@ -104,7 +104,7 @@ const WorkshopLanding = () => {
       </section>
 
       {/* Countdown Section */}
-      <section className="py-12 md:py-16 px-4 md:px-8 bg-card">
+      <section className="py-12 md:py-16 px-3 md:px-8 bg-card max-w-full overflow-hidden">
         <div className="container mx-auto max-w-5xl text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8">
             OS INGRESSOS ESGOTAM EM:
@@ -117,7 +117,7 @@ const WorkshopLanding = () => {
               { value: timeLeft.seconds, label: "Segundos" },
             ].map((item, index) => (
               <div key={index} className="bg-accent rounded-lg p-3 md:p-6 min-w-[70px] md:min-w-[100px]">
-                <p className="text-2xl md:text-4xl lg:text-5xl font-bold text-accent-foreground">
+                <p className="text-xl md:text-4xl lg:text-5xl font-bold text-accent-foreground">
                   {String(item.value).padStart(2, "0")}
                 </p>
                 <p className="text-xs md:text-sm text-accent-foreground mt-1 md:mt-2">{item.label}</p>
@@ -128,7 +128,7 @@ const WorkshopLanding = () => {
       </section>
 
       {/* Workshop Content Section */}
-      <section className="py-12 md:py-16 px-4 md:px-8">
+      <section className="py-12 md:py-16 px-3 md:px-8 max-w-full overflow-hidden">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12">
             💎 <span className="text-cta">Por que essa aula é essencial</span> para o seu crescimento?
@@ -154,7 +154,7 @@ const WorkshopLanding = () => {
               <img 
                 src={andreaSecondary} 
                 alt="Andrea Gomes" 
-                className="w-full rounded-lg shadow-2xl max-h-[300px] md:max-h-none object-cover"
+                className="w-full rounded-lg shadow-2xl max-h-[400px] md:max-h-none object-contain"
               />
             </div>
           </div>
@@ -169,7 +169,7 @@ const WorkshopLanding = () => {
       </section>
 
       {/* Target Audience Section */}
-      <section className="py-16 px-4 md:px-8 bg-card">
+      <section className="py-16 px-3 md:px-8 bg-card max-w-full overflow-hidden">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             🎯 Para quem é essa aula?
@@ -192,7 +192,7 @@ const WorkshopLanding = () => {
       </section>
 
       {/* Before/After Transformation */}
-      <section className="py-16 px-4 md:px-8">
+      <section className="py-16 px-3 md:px-8 max-w-full overflow-hidden">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Before */}
@@ -243,7 +243,7 @@ const WorkshopLanding = () => {
       </section>
 
       {/* How it Works */}
-      <section className="py-16 px-4 md:px-8 bg-card">
+      <section className="py-16 px-3 md:px-8 bg-card max-w-full overflow-hidden">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
             💡 Como funciona a aula
@@ -269,7 +269,7 @@ const WorkshopLanding = () => {
       </section>
 
       {/* Mentor Section */}
-      <section className="py-12 md:py-16 px-4 md:px-8 bg-accent">
+      <section className="py-12 md:py-16 px-3 md:px-8 bg-accent max-w-full overflow-hidden">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
@@ -308,7 +308,7 @@ const WorkshopLanding = () => {
               <img 
                 src={andreaMain} 
                 alt="Andrea Gomes - Mentora de Imagem" 
-                className="w-full rounded-lg shadow-2xl max-h-[400px] md:max-h-none object-cover"
+                className="w-full rounded-lg shadow-2xl max-h-[500px] md:max-h-none object-contain object-top"
               />
             </div>
           </div>
@@ -316,7 +316,7 @@ const WorkshopLanding = () => {
       </section>
 
       {/* Final Offer Section */}
-      <section id="cta-section" className="py-16 px-4 md:px-8">
+      <section id="cta-section" className="py-16 px-3 md:px-8 max-w-full overflow-hidden">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <AlertTriangle className="w-16 h-16 text-warning mx-auto mb-4 animate-pulse" />
@@ -372,43 +372,43 @@ const WorkshopLanding = () => {
                 </h3>
 
                 {/* Basic Ticket */}
-                <div className="bg-card text-foreground rounded-lg p-6 mb-4">
+                <div className="bg-card text-foreground rounded-lg p-6 mb-4 text-center">
                   <h4 className="text-xl font-bold mb-2">🎟 Ingresso Básico</h4>
                   <p className="text-sm text-muted-foreground mb-4">Lote Promocional</p>
-                  <div className="flex items-baseline gap-2">
+                  <div className="flex items-baseline gap-2 justify-center">
                     <span className="text-sm line-through text-muted-foreground">De R$ 197,00</span>
                   </div>
-                  <p className="text-5xl font-bold text-cta mb-2">R$ 47,00</p>
-                  <ul className="text-sm space-y-1 mb-4">
+                  <p className="text-5xl font-bold text-cta mb-2 mx-auto">R$ 47,00</p>
+                  <ul className="text-sm space-y-1 mb-4 text-left inline-block">
                     <li>✔ Aula Ao Vivo</li>
                     <li>✔ Replay por 7 dias</li>
                   </ul>
                   <Button 
-                    className="w-full bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg py-6 rounded-lg shadow-lg transition-all hover:scale-105"
+                    className="w-full bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg py-6 rounded-lg shadow-lg transition-all hover:scale-105 min-h-[44px]"
                   >
                     GARANTIR INGRESSO BÁSICO
                   </Button>
                 </div>
 
                 {/* Standard Ticket */}
-                <div className="bg-accent text-accent-foreground rounded-lg p-6 border-4 border-cta relative">
+                <div className="bg-accent text-accent-foreground rounded-lg p-6 border-4 border-cta relative text-center">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-cta text-cta-foreground px-4 py-1 rounded-full text-sm font-bold">
                     RECOMENDADO
                   </div>
                   <h4 className="text-xl font-bold mb-2">⭐ Ingresso Padrão</h4>
                   <p className="text-sm mb-4">Acesso Completo</p>
-                  <div className="flex items-baseline gap-2">
+                  <div className="flex items-baseline gap-2 justify-center">
                     <span className="text-sm line-through">De R$ 297,00</span>
                   </div>
-                  <p className="text-5xl font-bold mb-2">R$ 97,00</p>
-                  <ul className="text-sm space-y-1 mb-4">
+                  <p className="text-5xl font-bold mb-2 mx-auto">R$ 97,00</p>
+                  <ul className="text-sm space-y-1 mb-4 text-left inline-block">
                     <li>✔ Aula Ao Vivo</li>
                     <li>✔ Replay por 30 dias</li>
                     <li>✔ Material prático de aplicação</li>
                     <li>✔ Bônus: Estudo de Caso completo</li>
                   </ul>
                   <Button 
-                    className="w-full bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg py-6 rounded-lg shadow-lg transition-all hover:scale-105"
+                    className="w-full bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg py-6 rounded-lg shadow-lg transition-all hover:scale-105 min-h-[44px]"
                   >
                     GARANTIR INGRESSO PADRÃO
                   </Button>
@@ -424,7 +424,7 @@ const WorkshopLanding = () => {
       </section>
 
       {/* Testimonials / Results */}
-      <section className="py-16 px-4 md:px-8 bg-card">
+      <section className="py-16 px-3 md:px-8 bg-card max-w-full overflow-hidden">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
             💬 Resultados Reais
@@ -445,7 +445,7 @@ const WorkshopLanding = () => {
       </section>
 
       {/* Guarantee Section */}
-      <section className="py-16 px-4 md:px-8 bg-accent">
+      <section className="py-16 px-3 md:px-8 bg-accent max-w-full overflow-hidden">
         <div className="container mx-auto max-w-4xl text-center">
           <Shield className="w-20 h-20 text-accent-foreground mx-auto mb-6" />
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent-foreground">
@@ -462,7 +462,7 @@ const WorkshopLanding = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 md:px-8 bg-secondary text-secondary-foreground">
+      <footer className="py-12 px-3 md:px-8 bg-secondary text-secondary-foreground max-w-full overflow-hidden">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-4 text-sm">
             <p className="font-semibold">Este site NÃO é do Facebook.</p>
