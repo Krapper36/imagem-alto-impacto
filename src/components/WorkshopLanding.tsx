@@ -150,13 +150,11 @@ const WorkshopLanding = () => {
               ))}
             </div>
 
-            <div className="space-y-4">
-              <img 
-                src={andreaSecondary} 
-                alt="Andrea Gomes" 
-                className="w-full rounded-lg shadow-2xl max-h-[400px] md:max-h-none object-contain"
-              />
-            </div>
+            <img 
+              src={andreaSecondary} 
+              alt="Andrea Gomes" 
+              className="w-full rounded-lg shadow-2xl max-h-[400px] md:max-h-none object-contain"
+            />
           </div>
 
           <Button 
@@ -326,52 +324,9 @@ const WorkshopLanding = () => {
           </div>
 
           <div className="bg-foreground text-background rounded-2xl p-8 md:p-12 shadow-2xl">
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Left Column */}
-              <div>
-                <div className="bg-card text-foreground rounded-lg p-6 mb-8">
-                  <h3 className="text-2xl font-bold mb-4">Workshop ao vivo inclui:</h3>
-                  <div className="space-y-3">
-                    {[
-                      "Presença ao vivo no dia 10/11",
-                      "Acesso à gravação completa",
-                      "Material didático em PDF",
-                      "Bônus: Estudo de caso exclusivo",
-                      "Certificado de participação",
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-3">
-                        <Check className="w-5 h-5 text-success flex-shrink-0" />
-                        <p>{item}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Mini Countdown */}
-                <div className="bg-card text-foreground rounded-lg p-4">
-                  <p className="text-center font-bold mb-2">Promoção termina em:</p>
-                  <div className="flex justify-center gap-2">
-                    {[
-                      { value: timeLeft.hours, label: "H" },
-                      { value: timeLeft.minutes, label: "M" },
-                      { value: timeLeft.seconds, label: "S" },
-                    ].map((item, index) => (
-                      <div key={index} className="bg-accent text-accent-foreground rounded px-3 py-2">
-                        <p className="text-xl font-bold">{String(item.value).padStart(2, "0")}</p>
-                        <p className="text-xs">{item.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column - Pricing */}
+            <div className="grid gap-12">
               <div className="flex flex-col justify-center">
-                <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                  Garanta seu ingresso agora e descubra como atrair clientes de alto padrão!
-                </h3>
-
-                {/* Basic Ticket */}
+                {/* título removido */}
                 <div className="bg-card text-foreground rounded-lg p-6 mb-4 text-center">
                   <h4 className="text-xl font-bold mb-2">🎟 Ingresso Básico</h4>
                   <p className="text-sm text-muted-foreground mb-4">Lote Promocional</p>
@@ -383,14 +338,11 @@ const WorkshopLanding = () => {
                     <li>✔ Aula Ao Vivo</li>
                     <li>✔ Replay por 7 dias</li>
                   </ul>
-                  <Button 
-                    className="w-full bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg py-6 rounded-lg shadow-lg transition-all hover:scale-105 min-h-[44px]"
-                  >
+                  <Button className="w-full bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg py-6 rounded-lg shadow-lg transition-all hover:scale-105 min-h-[44px]">
                     GARANTIR INGRESSO BÁSICO
                   </Button>
                 </div>
 
-                {/* Standard Ticket */}
                 <div className="bg-accent text-accent-foreground rounded-lg p-6 border-4 border-cta relative text-center">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-cta text-cta-foreground px-4 py-1 rounded-full text-sm font-bold">
                     RECOMENDADO
@@ -407,9 +359,7 @@ const WorkshopLanding = () => {
                     <li>✔ Material prático de aplicação</li>
                     <li>✔ Bônus: Estudo de Caso completo</li>
                   </ul>
-                  <Button 
-                    className="w-full bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg py-6 rounded-lg shadow-lg transition-all hover:scale-105 min-h-[44px]"
-                  >
+                  <Button className="w-full bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg py-6 rounded-lg shadow-lg transition-all hover:scale-105 min-h-[44px]">
                     GARANTIR INGRESSO PADRÃO
                   </Button>
                 </div>
