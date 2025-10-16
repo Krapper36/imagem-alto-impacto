@@ -38,7 +38,7 @@ const WorkshopLanding = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background font-['Montserrat',sans-serif] text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background font-['Montserrat',sans-serif] text-foreground">
       {/* Fixed Attention Bar */}
       <div className="fixed top-0 left-0 right-0 bg-cta z-50 py-3 px-3 md:px-4 max-w-full">
         <p className="text-center text-cta-foreground font-bold text-sm md:text-base break-words leading-tight">
@@ -314,7 +314,7 @@ const WorkshopLanding = () => {
       </section>
 
       {/* Final Offer Section */}
-      <section id="cta-section" className="py-16 px-3 md:px-8 max-w-full overflow-hidden">
+      <section id="cta-section" className="py-16 px-4 sm:px-6 md:px-8 max-w-full overflow-visible">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <AlertTriangle className="w-16 h-16 text-warning mx-auto mb-4 animate-pulse" />
@@ -323,11 +323,13 @@ const WorkshopLanding = () => {
             </h2>
           </div>
 
-          <div className="bg-foreground text-background rounded-2xl p-8 md:p-12 shadow-2xl">
-            <div className="grid gap-12">
-              <div className="flex flex-col justify-center">
-                {/* título removido */}
-                <div className="bg-card text-foreground rounded-lg p-6 mb-4 text-center">
+          {/* Wrapper centralizado e sem corte */}
+          <div className="bg-foreground text-background rounded-2xl p-6 md:p-12 shadow-2xl w-full max-w-[720px] md:max-w-5xl mx-auto overflow-visible">
+            {/* Contêiner dos cards centralizado e responsivo */}
+            <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 md:gap-8">
+              {/* Card: Ingresso Básico */}
+              <div className="min-w-0 w-full sm:max-w-md md:w-[380px] mx-auto">
+                <div className="bg-card text-foreground rounded-lg p-6 text-center h-full">
                   <h4 className="text-xl font-bold mb-2">🎟 Ingresso Básico</h4>
                   <p className="text-sm text-muted-foreground mb-4">Lote Promocional</p>
                   <div className="flex items-baseline gap-2 justify-center">
@@ -342,8 +344,11 @@ const WorkshopLanding = () => {
                     GARANTIR INGRESSO BÁSICO
                   </Button>
                 </div>
+              </div>
 
-                <div className="bg-accent text-accent-foreground rounded-lg p-6 border-4 border-cta relative text-center">
+              {/* Card: Ingresso Padrão */}
+              <div className="min-w-0 w-full sm:max-w-md md:w-[380px] mx-auto">
+                <div className="bg-accent text-accent-foreground rounded-lg p-6 border-4 border-cta relative text-center h-full">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-cta text-cta-foreground px-4 py-1 rounded-full text-sm font-bold">
                     RECOMENDADO
                   </div>
@@ -363,14 +368,16 @@ const WorkshopLanding = () => {
                     GARANTIR INGRESSO PADRÃO
                   </Button>
                 </div>
-
-                <p className="text-center mt-4 text-sm">
-                  ⚠️ <span className="font-bold">VAGAS LIMITADAS</span> - Lote promocional encerra em breve!
-                </p>
               </div>
             </div>
-          </div>
-        </div>
+
+            {/* Texto centralizado vertical e horizontalmente */}
+            <div className="mt-6 flex items-center justify-center min-h-[64px]">
+              <p className="text-center text-base md:text-lg break-words whitespace-normal leading-normal px-4">
+                ⚠️ <span className="font-bold">VAGAS LIMITADAS</span> - Lote promocional encerra em breve!
+              </p>
+            </div>
+                     </div> {/* fecha o wrapper bg-foreground */}        </div> {/* fecha o container mx-auto */}
       </section>
 
       {/* Testimonials / Results */}
