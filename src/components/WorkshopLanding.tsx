@@ -340,7 +340,7 @@ const WorkshopLanding = () => {
                     <li>✔ Aula Ao Vivo</li>
                     <li>✔ Replay por 7 dias</li>
                   </ul>
-                  <Button className="w-full bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg py-6 rounded-lg shadow-lg transition-all hover:scale-105 min-h-[44px]">
+                  <Button className="w-full h-auto bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-base md:text-lg px-4 py-4 rounded-lg shadow-lg transition-all hover:scale-105 min-h-[44px] whitespace-normal break-words text-center">
                     GARANTIR INGRESSO BÁSICO
                   </Button>
                 </div>
@@ -364,7 +364,7 @@ const WorkshopLanding = () => {
                     <li>✔ Material prático de aplicação</li>
                     <li>✔ Bônus: Estudo de Caso completo</li>
                   </ul>
-                  <Button className="w-full bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-lg py-6 rounded-lg shadow-lg transition-all hover:scale-105 min-h-[44px]">
+                  <Button className="w-full h-auto bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-base md:text-lg px-4 py-4 rounded-lg shadow-lg transition-all hover:scale-105 min-h-[44px] whitespace-normal break-words text-center">
                     GARANTIR INGRESSO PADRÃO
                   </Button>
                 </div>
