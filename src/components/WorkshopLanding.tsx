@@ -14,7 +14,7 @@ const WorkshopLanding = () => {
 
   useEffect(() => {
     const eventDate = new Date("2025-11-10T20:00:00");
-    
+
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = eventDate.getTime() - now;
@@ -42,18 +42,17 @@ const WorkshopLanding = () => {
       {/* Fixed Attention Bar */}
       <div className="fixed top-0 left-0 right-0 bg-cta z-50 py-3 px-3 md:px-4 max-w-full">
         <p className="text-center text-cta-foreground font-bold text-sm md:text-base break-words leading-tight">
-          Atenção: Exclusivo para empresárias que já têm agenda cheia, mas querem cobrar mais caro pelos seus serviços
+          Atenção: Exclusivo Para empresárias com agenda cheia que querem cobrar mais caro.
         </p>
       </div>
 
       {/* Hero Section */}
-      <section 
+      <section
         className="relative min-h-screen pt-20 pb-12 px-3 md:px-8 flex items-center bg-cover bg-center bg-fixed max-w-full overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${andreaMain})`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${andreaMain})`,
         }}
       >
-        
         <div className="container mx-auto max-w-5xl relative z-10">
           {/* Workshop Tag */}
           <div className="inline-block mb-8 animate-pulse">
@@ -90,7 +89,7 @@ const WorkshopLanding = () => {
           </div>
 
           {/* CTA Button */}
-          <Button 
+          <Button
             onClick={scrollToCTA}
             className="w-full md:w-auto bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-base md:text-lg px-8 md:px-12 py-4 md:py-6 rounded-lg shadow-lg shadow-cta/50 transition-all hover:scale-105 min-h-[44px]"
           >
@@ -106,9 +105,7 @@ const WorkshopLanding = () => {
       {/* Countdown Section */}
       <section className="py-12 md:py-16 px-3 md:px-8 bg-card max-w-full overflow-hidden">
         <div className="container mx-auto max-w-5xl text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8">
-            OS INGRESSOS ESGOTAM EM:
-          </h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8">OS INGRESSOS ESGOTAM EM:</h2>
           <div className="flex justify-center gap-2 md:gap-4 flex-wrap">
             {[
               { value: timeLeft.days, label: "Dias" },
@@ -133,7 +130,7 @@ const WorkshopLanding = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12">
             💎 <span className="text-cta">Por que essa aula é essencial</span> para o seu crescimento?
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
             <div className="space-y-4 md:space-y-6">
               {[
@@ -150,14 +147,14 @@ const WorkshopLanding = () => {
               ))}
             </div>
 
-            <img 
-              src={andreaSecondary} 
-              alt="Andrea Gomes" 
+            <img
+              src={andreaSecondary}
+              alt="Andrea Gomes"
               className="w-full rounded-lg shadow-2xl max-h-[400px] md:max-h-none object-contain"
             />
           </div>
 
-          <Button 
+          <Button
             onClick={scrollToCTA}
             className="w-full md:w-auto bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-base md:text-lg px-8 md:px-12 py-4 md:py-6 rounded-lg shadow-lg shadow-cta/50 transition-all hover:scale-105 min-h-[44px]"
           >
@@ -169,9 +166,7 @@ const WorkshopLanding = () => {
       {/* Target Audience Section */}
       <section className="py-16 px-3 md:px-8 bg-card max-w-full overflow-hidden">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-            🎯 Para quem é essa aula?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">🎯 Para quem é essa aula?</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
               "Mulheres que já têm carreira ou negócio estabelecido",
@@ -243,16 +238,26 @@ const WorkshopLanding = () => {
       {/* How it Works */}
       <section className="py-16 px-3 md:px-8 bg-card max-w-full overflow-hidden">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            💡 Como funciona a aula
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">💡 Como funciona a aula</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
               { icon: "📌", title: "Ao Vivo", desc: "Participe em tempo real e tire suas dúvidas com Andrea Gomes" },
               { icon: "📌", title: "Replay Garantido", desc: "Assista quando quiser, no seu ritmo" },
-              { icon: "📌", title: "Material Exclusivo", desc: "Aplique imediatamente o método no seu guarda-roupa e na sua imagem" },
-              { icon: "📌", title: "Bônus Especial", desc: "Estudo de caso real de uma cliente que lotou a agenda e multiplicou seus ganhos" },
-              { icon: "📌", title: "Suporte Direto", desc: "Orientação prática para não travar na hora de aplicar o conteúdo" },
+              {
+                icon: "📌",
+                title: "Material Exclusivo",
+                desc: "Aplique imediatamente o método no seu guarda-roupa e na sua imagem",
+              },
+              {
+                icon: "📌",
+                title: "Bônus Especial",
+                desc: "Estudo de caso real de uma cliente que lotou a agenda e multiplicou seus ganhos",
+              },
+              {
+                icon: "📌",
+                title: "Suporte Direto",
+                desc: "Orientação prática para não travar na hora de aplicar o conteúdo",
+              },
             ].map((item, index) => (
               <div key={index} className="flex items-start gap-4 bg-background p-6 rounded-lg">
                 <span className="text-3xl">{item.icon}</span>
@@ -277,13 +282,18 @@ const WorkshopLanding = () => {
               <h3 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-accent-foreground">Andrea Gomes</h3>
               <div className="space-y-3 md:space-y-4 text-accent-foreground">
                 <p className="font-semibold text-sm md:text-base">
-                  Mentora de imagem e estilo, criadora do Método Prisma — um processo que transforma mulheres em versões autênticas, elegantes e de alto padrão, sem moldes prontos e sem perder a essência.
+                  Mentora de imagem e estilo, criadora do Método Prisma — um processo que transforma mulheres em versões
+                  autênticas, elegantes e de alto padrão, sem moldes prontos e sem perder a essência.
                 </p>
                 <p className="text-sm md:text-base">
-                  Antes de se tornar referência em imagem, Andrea era advogada. Um feedback negativo sobre sua aparência a fez buscar uma consultoria de imagem. Naquele momento, ela percebeu que não estava feliz com a advocacia — e se encontrou em um novo propósito: ajudar mulheres a se redescobrirem por meio da sua imagem.
+                  Antes de se tornar referência em imagem, Andrea era advogada. Um feedback negativo sobre sua aparência
+                  a fez buscar uma consultoria de imagem. Naquele momento, ela percebeu que não estava feliz com a
+                  advocacia — e se encontrou em um novo propósito: ajudar mulheres a se redescobrirem por meio da sua
+                  imagem.
                 </p>
                 <p className="text-sm md:text-base">
-                  Desde 2021, Andrea já atendeu dezenas de mulheres, ministrou palestras para advogadas, empresárias e órgãos públicos, e treinou equipes de lojas e salões de beleza.
+                  Desde 2021, Andrea já atendeu dezenas de mulheres, ministrou palestras para advogadas, empresárias e
+                  órgãos públicos, e treinou equipes de lojas e salões de beleza.
                 </p>
                 <p className="font-semibold text-sm md:text-base">Formações:</p>
                 <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
@@ -295,7 +305,7 @@ const WorkshopLanding = () => {
                   <li>🎓 Etiqueta e Comportamento Corporativo com Raquel Jordan</li>
                 </ul>
               </div>
-              <Button 
+              <Button
                 onClick={scrollToCTA}
                 className="mt-6 md:mt-8 w-full md:w-auto bg-cta hover:bg-cta/90 text-cta-foreground font-bold text-base md:text-lg px-8 md:px-12 py-4 md:py-6 rounded-lg shadow-lg shadow-cta/50 transition-all hover:scale-105 min-h-[44px]"
               >
@@ -303,9 +313,9 @@ const WorkshopLanding = () => {
               </Button>
             </div>
             <div>
-              <img 
-                src={andreaMain} 
-                alt="Andrea Gomes - Mentora de Imagem" 
+              <img
+                src={andreaMain}
+                alt="Andrea Gomes - Mentora de Imagem"
                 className="w-full rounded-lg shadow-2xl max-h-[500px] md:max-h-none object-contain object-top"
               />
             </div>
@@ -318,11 +328,8 @@ const WorkshopLanding = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <AlertTriangle className="w-16 h-16 text-warning mx-auto mb-4 animate-pulse" />
-            <h2 className="text-3xl md:text-5xl font-bold">
-              ATENÇÃO! ÚLTIMAS VAGAS
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold">ATENÇÃO! ÚLTIMAS VAGAS</h2>
           </div>
-
           {/* Wrapper centralizado e sem corte */}
           <div className="bg-foreground text-background rounded-2xl p-6 md:p-12 shadow-2xl w-full max-w-[720px] md:max-w-5xl mx-auto overflow-visible">
             {/* Contêiner dos cards centralizado e responsivo */}
@@ -377,15 +384,16 @@ const WorkshopLanding = () => {
                 ⚠️ <span className="font-bold">VAGAS LIMITADAS</span> - Lote promocional encerra em breve!
               </p>
             </div>
-                     </div> {/* fecha o wrapper bg-foreground */}        </div> {/* fecha o container mx-auto */}
+          </div>{" "}
+          {/* fecha o wrapper bg-foreground */}{" "}
+        </div>{" "}
+        {/* fecha o container mx-auto */}
       </section>
 
       {/* Testimonials / Results */}
       <section className="py-16 px-3 md:px-8 bg-card max-w-full overflow-hidden">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            💬 Resultados Reais
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">💬 Resultados Reais</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               "Clientes que antes se sentiam simples demais, hoje são reconhecidas pela elegância.",
@@ -405,16 +413,12 @@ const WorkshopLanding = () => {
       <section className="py-16 px-3 md:px-8 bg-accent max-w-full overflow-hidden">
         <div className="container mx-auto max-w-4xl text-center">
           <Shield className="w-20 h-20 text-accent-foreground mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent-foreground">
-            🔁 GARANTIA INCONDICIONAL
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent-foreground">🔁 GARANTIA INCONDICIONAL</h2>
           <p className="text-lg md:text-xl text-accent-foreground mb-4">
             Participe da aula, aplique o conteúdo, e se ao final você sentir que não valeu a pena,{" "}
             <span className="font-bold">devolvemos 100% do seu investimento.</span>
           </p>
-          <p className="text-accent-foreground font-bold text-xl">
-            Sem perguntas, sem burocracia.
-          </p>
+          <p className="text-accent-foreground font-bold text-xl">Sem perguntas, sem burocracia.</p>
         </div>
       </section>
 
@@ -424,15 +428,21 @@ const WorkshopLanding = () => {
           <div className="text-center space-y-4 text-sm">
             <p className="font-semibold">Este site NÃO é do Facebook.</p>
             <p>
-              Este site não faz parte do site do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira. FACEBOOK é uma marca comercial independente da FACEBOOK, Inc.
+              Este site não faz parte do site do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo
+              Facebook de nenhuma maneira. FACEBOOK é uma marca comercial independente da FACEBOOK, Inc.
             </p>
             <p>
-              Nós NÃO compartilharemos seu endereço de e-mail com ninguém. Você pode cancelar sua inscrição a qualquer momento. Ao se cadastrar, você está aceitando receber comunicações informativas e promocionais.
+              Nós NÃO compartilharemos seu endereço de e-mail com ninguém. Você pode cancelar sua inscrição a qualquer
+              momento. Ao se cadastrar, você está aceitando receber comunicações informativas e promocionais.
             </p>
             <div className="flex justify-center gap-4 pt-4">
-              <a href="#" className="hover:text-accent transition-colors">Política de Privacidade</a>
+              <a href="#" className="hover:text-accent transition-colors">
+                Política de Privacidade
+              </a>
               <span>|</span>
-              <a href="#" className="hover:text-accent transition-colors">Termos de Uso</a>
+              <a href="#" className="hover:text-accent transition-colors">
+                Termos de Uso
+              </a>
             </div>
             <p className="pt-4">© 2025 Andrea Gomes – Todos os direitos reservados.</p>
           </div>
